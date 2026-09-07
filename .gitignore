@@ -1,0 +1,22 @@
+# Raw source video clips & master render (not needed for static web serving)
+assets/clips/
+assets/master.mp4
+*.mp4
+
+# Python cache & temporary build configs
+__pycache__/
+*.pyc
+build_cfg.json
+get_fractions.py
+
+# Secrets and local agent environment
+.agent/
+*.env*
+.env
+
+# Local wrapper
+powershell.cmd
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
