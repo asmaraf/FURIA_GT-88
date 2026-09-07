@@ -110,7 +110,7 @@ python -m http.server 4185
 npx serve .
 ```
 
-Open **[[http://localhost:4185](https://furia-gt-88.vercel.app/)]** in your browser.
+Open **[[http://furia-gt-88.vercel.app](https://furia-gt-88.vercel.app/)]** in your browser.
 
 ---
 
