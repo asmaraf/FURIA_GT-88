@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1816"/>
+      <stop offset="100%" stop-color="#0a0908"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff756b"/>
+      <stop offset="45%" stop-color="#e85c52"/>
+      <stop offset="100%" stop-color="#b82622"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e85c52"/>
+      <stop offset="100%" stop-color="#731310"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Shield Badge -->
+  <rect x="6" y="6" width="116" height="116" rx="28" fill="url(#badgeGrad)" stroke="url(#borderGrad)" stroke-width="4"/>
+  
+  <!-- Subtle Internal Speed Notch -->
+  <path d="M 24 20 L 104 20" stroke="#e85c52" stroke-width="2" stroke-opacity="0.4" stroke-linecap="round"/>
+
+  <!-- Iconic Italic '88' Racing Numeral -->
+  <g transform="translate(64, 65) skewX(-12)">
+    <!-- Shadow offset for depth -->
+    <text x="0" y="3" 
+          font-family="-apple-system, 'SF Pro Display', 'Arial Black', Impact, sans-serif" 
+          font-size="74" 
+          font-weight="900" 
+          font-style="italic"
+          letter-spacing="-4" 
+          text-anchor="middle" 
+          dominant-baseline="central" 
+          fill="#3a0c0a" 
+          opacity="0.9">88</text>
+    
+    <!-- Main Gradient '88' -->
+    <text x="0" y="0" 
+          font-family="-apple-system, 'SF Pro Display', 'Arial Black', Impact, sans-serif" 
+          font-size="74" 
+          font-weight="900" 
+          font-style="italic"
+          letter-spacing="-4" 
+          text-anchor="middle" 
+          dominant-baseline="central" 
+          fill="url(#textGrad)">88</text>
+  </g>
+</svg>
