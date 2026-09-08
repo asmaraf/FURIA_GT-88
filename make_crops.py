@@ -1,4 +1,5 @@
 import os
+# pyrefly: ignore [missing-import]
 from PIL import Image
 
 os.makedirs("assets/crops", exist_ok=True)

@@ -74,31 +74,48 @@
     position: absolute; z-index: 10;
     opacity: 0; pointer-events: none;
     will-change: opacity, transform;
+    box-sizing: border-box;
   }
   .caption h1 {
-    font-size: clamp(40px, 6.5vw, 92px);
+    font-size: clamp(28px, 7.5vw, 92px);
     font-weight: 700; letter-spacing: -0.025em; line-height: 1.02;
     text-transform: uppercase;
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+  .caption h1 .red,
+  #loader .mark {
+    white-space: nowrap;
+    text-wrap: nowrap;
   }
   .caption h2 {
-    font-size: clamp(28px, 4.2vw, 56px);
+    font-size: clamp(26px, 4.2vw, 56px);
     font-weight: 650; letter-spacing: -0.02em; line-height: 1.05;
   }
   .caption p {
     margin-top: 14px;
-    font-size: clamp(15px, 1.35vw, 19px);
+    font-size: clamp(14px, 1.35vw, 19px);
     color: var(--text-dim); font-weight: 400; letter-spacing: 0.01em; line-height: 1.5;
     max-width: 36ch;
   }
   .red { color: var(--red-bright); }
 
-  .cap-center { left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; }
+  .cap-center {
+    left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;
+    width: max-content; max-width: 90vw;
+  }
   .cap-center p { margin-left: auto; margin-right: auto; }
-  .cap-left { left: 7vw; top: 50%; transform: translateY(-50%); text-align: left; }
-  .cap-right { right: 7vw; top: 50%; transform: translateY(-50%); text-align: right; }
+  .cap-left { left: 7vw; top: 50%; transform: translateY(-50%); text-align: left; max-width: 86vw; }
+  .cap-right { right: 7vw; top: 50%; transform: translateY(-50%); text-align: right; max-width: 86vw; }
   .cap-right p { margin-left: auto; }
-  .cap-top { left: 50%; top: 12vh; transform: translateX(-50%); text-align: center; }
-  .cap-bottom { left: 50%; bottom: 10vh; transform: translateX(-50%); text-align: center; }
+  .cap-top {
+    left: 50%; top: 12vh; transform: translateX(-50%); text-align: center;
+    width: max-content; max-width: 90vw;
+  }
+  .cap-bottom {
+    left: 50%; bottom: 10vh; transform: translateX(-50%); text-align: center;
+    width: max-content; max-width: 90vw;
+  }
   .cap-bottom p { margin-left: auto; margin-right: auto; }
 
   #scroll-cue {
@@ -349,13 +366,34 @@
     .bp-footer .cols { grid-template-columns: 1fr 1fr; gap: 40px; }
     #brandnav .links { display: none; }
   }
+
+  @media (max-width: 600px) {
+    .caption h1 {
+      font-size: clamp(24px, 7.8vw, 38px);
+      white-space: nowrap;
+      text-wrap: nowrap;
+    }
+    .caption h2 {
+      font-size: clamp(20px, 5.5vw, 32px);
+    }
+    .caption p {
+      font-size: clamp(13px, 3.6vw, 16px);
+      max-width: 32ch;
+    }
+    .cap-left { left: 5vw; max-width: 90vw; }
+    .cap-right { right: 5vw; max-width: 90vw; }
+    .cap-bottom { bottom: 8vh; }
+    .bp-stats .stat-item { min-width: 130px; }
+    .bp-stats .num { font-size: 38px; }
+    .bp-footer .cols { grid-template-columns: 1fr; gap: 32px; }
+  }
 </style>
 </head>
 <body>
 
 <!-- ── loader ── -->
 <div id="loader">
-  <div class="mark">FURIA GT-88</div>
+  <div class="mark">FURIA GT&#8209;88</div>
   <div class="bar"><i id="loadbar"></i></div>
 </div>
 
@@ -379,7 +417,7 @@
 
     <!-- Opening Title: visible at scroll 0 -->
     <div class="caption cap-center" data-in="-0.05" data-hold="0.03" data-out="0.08">
-      <h1>FURIA <span class="red">GT-88</span></h1>
+      <h1>FURIA <span class="red">GT&#8209;88</span></h1>
       <p>Pure wedge. Zero electronic interference.</p>
     </div>
 
@@ -415,7 +453,7 @@
 
     <!-- Final CTA Card -->
     <div class="caption cap-bottom" data-in="0.90" data-hold="0.96" data-out="1.08">
-      <h1>FURIA <span class="red">GT-88</span></h1>
+      <h1>FURIA <span class="red">GT&#8209;88</span></h1>
       <p>Analog fury. Strictly limited production.</p>
       <a class="cta" href="#reserve">Reserve Chassis</a>
     </div>
